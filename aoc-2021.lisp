@@ -25,11 +25,8 @@
       (format t "~A" data)
       (make-array (list (length data)) :initial-contents data))))
 
-(defun load-int-list-from-file(filename)
-  (with-open-file (in filename :direction :input)
-    (loop :for line := (read-line in nil)
-          :while line
-          :collect (parse-number:parse-number line ))))
+(defun load-int-list-from-file(input-file)
+  (mapcar #'parse-integer (uiop:read-file-lines input-file)))
 
 (defun solution-1-1 (input-file)
   (let ((vals (load-int-list-from-file input-file)))
