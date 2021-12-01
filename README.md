@@ -1,9 +1,4 @@
 # aoc-2021
-### _Your Name <your.name@example.com>_
 
-This is a project to do ... something.
-
-## License
-
-Specify license here
-
+My attempt to solve the Advent of Code 2021 puzzles.
+I am doing it in Common Lisp this year.
